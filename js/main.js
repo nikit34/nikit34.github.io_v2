@@ -46,7 +46,7 @@ function backlight_over(n) {
     text_block[i].style.color = "black";
     text_block[i].style.transition = "all 1s";
   }
-  subhead_block[n - 1].style.color = "orange";
+  subhead_block[n - 1].style.color = "rgba(80, 50, 200, 0.9)";
   subhead_block[n - 1].style.transition = "all 1s";
 }
 

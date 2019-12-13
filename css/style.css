@@ -31,6 +31,23 @@ h6 {
 h1 {
   font-size: 6rem;
   line-height: 5.5rem;
+  position: relative;
+}
+
+#main_head_filling:before {
+  content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 42px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 2s ease;
+}
+
+#main_head_filling:hover:before {
+  width: 100%;
 }
 
 h2 {
@@ -54,20 +71,24 @@ p.lead {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
-  color:white;
+  color:rgb(255, 255, 255, 0.5);
 }
 
 .social-icons a {
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: rgba(200, 100, 50, 0.5);
-  color: #fff !important;
+  background-color: rgba(100, 90, 300, 0.3);
   border-radius: 100%;
   text-align: center;
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-right: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 1s, font-size 1s, color 1s;
+  -moz-transition: background-color 1s, font-size 1s, color 1s;
+  -o-transition: background-color 1s, font-size 1s, color 1s;
+  transition: background-color 1s, font-size 1s, color 1s;
 }
 
 .social-icons a:last-child {
@@ -75,7 +96,9 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: rgba(200, 100, 50, 0.9);
+  background-color: rgba(80, 50, 200, 0.9);
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
 }
 
 .dev-icons {
@@ -83,7 +106,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: rgba(200, 100, 50, 0.9);
+  color: rgba(80, 50, 200, 0.9);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -93,7 +116,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: rgba(110, 110, 180, 0.9);
 }
 
 @media (min-width: 992px) {
@@ -113,10 +136,20 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    width: 10rem;
+    height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    -webkit-transition: width 1s, height 1s;
+    -moz-transition: width 1s, height 1s;
+    -o-transition: width 1s, height 1s;
+    transition: width 1s, height 1s;
   }
+  #sideNav .navbar-brand .img-profile:hover {
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+
+
   #sideNav .navbar-collapse {
     display: flex;
     align-items: flex-start;
@@ -163,21 +196,21 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: rgba(200, 100, 50, 0.9) !important;
+  background-color: rgba(80, 50, 200, 0.9) !important;
 }
 
 .text-primary {
-  color: rgba(200, 100, 50, 0.9) !important;
+  color: rgba(80, 50, 200, 0.9) !important;
 }
 
 a {
-  color: rgba(200, 100, 50, 0.9);
+  color: rgba(80, 50, 200, 0.9);
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #ffc9aaf3;
+  color: rgba(100, 90, 300, 0.9);
 }
 
 #about {
