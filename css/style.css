@@ -13,7 +13,6 @@ body {
   }
 }
 
-
 h1,
 h2,
 h3,
@@ -31,23 +30,25 @@ h6 {
 h1 {
   font-size: 6rem;
   line-height: 5.5rem;
-  position: relative;
 }
 
-#main_head_filling:before {
-  content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 42px;
-	background: rgba(255,255,255,0.3);
-	border-radius: 5px;
-	transition: all 2s ease;
+#main_head_filling {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    rgba(100, 100, 100, 0.7),
+    rgba(200, 200, 200, 0.3)
+  );
+  background-size: 100% 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  transition: 1s all;
 }
 
-#main_head_filling:hover:before {
-  width: 100%;
+#main_head_filling:hover {
+  background-size: 0% 100%;
+  background-color: rgba(150, 10, 250, 0.7);
 }
 
 h2 {
@@ -71,7 +72,7 @@ p.lead {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
-  color:rgb(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255, 0.5);
 }
 
 .social-icons a {
@@ -149,7 +150,6 @@ p.lead {
     height: 10.5rem;
   }
 
-
   #sideNav .navbar-collapse {
     display: flex;
     align-items: flex-start;
@@ -166,7 +166,17 @@ p.lead {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 5%;
+    transition: background-size 0.5s;
   }
+}
+
+#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  background-size: 50% 5%;
 }
 
 section.resume-section {
@@ -212,6 +222,21 @@ a:focus,
 a:active {
   color: rgba(100, 90, 300, 0.9);
 }
+b{
+  font-size: auto;
+  -moz-transition: font-size 1s, color 1s;
+  -webkit-transition: font-size 1s, color 1s;
+  -o-transition: font-size 1s, color 1s;
+  transition: font-size 1s, color 1s;
+}
+b:hover{
+  font-size: 105%;
+  color: rgba(210, 10, 240, 0.9);
+}
+p b:hover{
+  font-size: 110%;
+  color: rgba(255, 0, 50, 0.9);
+}
 
 #about {
   background: linear-gradient(
@@ -226,11 +251,10 @@ a:active {
   background-size: cover;
 }
 
-
 .backlight_black_text {
-    color:#868e96;
+  color: #868e96;
 }
 
 .backlight_orange_text {
-    color: #868e96;
+  color: #868e96;
 }
