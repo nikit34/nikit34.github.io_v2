@@ -1,7 +1,7 @@
 (function($) {
   "use strict";
 
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $("a.js-scroll-trigger[href*='#']:not([href='#'])").click(function() {
     if (
       location.pathname.replace(/^\//, "") ==
         this.pathname.replace(/^\//, "") &&
@@ -34,6 +34,18 @@
 
 
 
+$(window).on("scroll touchmove", function () {
+  if ($(document).scrollTop() > $("#portfolio").position().top) {
+    $("footer").css("visibility", "visible").fadeIn(500);
+    console.log($(document).scrollTop(), $("#portfolio").position().top);
+  } else {
+    $("footer").css("visibility", "hidden").fadeOut(500);
+  };
+});
+
+
+
+
 
 
 
@@ -59,4 +71,31 @@ function backlight_out(n) {
   }
   subhead_block[n-1].style.color = "#868e96";
   subhead_block[n-1].style.transition = "all 1s";
+}
+
+
+
+
+
+
+
+
+
+const cards = document.querySelectorAll(".card");
+
+for (let i = 0; i < cards.length; i++){
+  const card = cards[i];
+  card.addEventListener("mousemove", startRotate);
+  card.addEventListener("mouseout", stopRotate);
+}
+
+function startRotate(event){
+  const cardItem = this.querySelector(".card-item");
+  const halfHeight = cardItem.offsetHeight / 2;
+  cardItem.style.transform = "rotateX(" + - (event.offsetY - halfHeight) / 5 + "deg) rotateY(" + (event.offsetX - halfHeight) / 5 + "deg)";
+}
+
+function stopRotate(event){
+  const cardItem = this.querySelector(".card-item");
+  cardItem.style.transform = "rotate(0)";
 }
