@@ -54,6 +54,7 @@ $(window).on("scroll touchmove", function () {
 function backlight_over(n) {
   var text_block = document.getElementsByClassName("backlight_black_text");
   var subhead_block = document.getElementsByClassName("backlight_orange_text");
+  var block_shadow = document.get
   for (let i = (2*n-2); i <= (2*n-1); i++) {
     text_block[i].style.color = "black";
     text_block[i].style.transition = "all 1s";
