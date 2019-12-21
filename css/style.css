@@ -285,8 +285,11 @@ p b:hover {
   font-size: 110%;
   color: rgba(250, 250, 50, 0.9);
 }
+p {
+  text-indent: 5%;
+}
 
-#about {
+#interests {
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0),
@@ -320,7 +323,7 @@ footer {
 .my_container {
   display: flex;
   height: 60vh;
-  background-color: rgba(100, 200, 190, 0.8);
+  background-color: rgba(80, 50, 200, 0.9);
   justify-content: space-around;
   align-items: center;
 }
@@ -352,7 +355,7 @@ footer {
   height: 300px;
   border-top: 4px solid #f0f0f0;
   border-bottom: 4px solid #f0f0f0;
-  background: url("../img/backcover_2.jpg") no-repeat center center fixed;
+  background: url("../img/backcover_3.jpg") no-repeat center center fixed;
   background-blend-mode: multiply;
   background-color: lightblue;
   background-size: cover;
@@ -362,7 +365,7 @@ footer {
 }
 
 .parallax_container {
-  background-color: rgba(100, 200, 190, 0.8);
+  background-color: rgba(80, 50, 200, 0.9);
     overflow:hidden;
     padding: -1%;
 }
