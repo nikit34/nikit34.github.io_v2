@@ -76,7 +76,6 @@ p.lead {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
-  /* color: rgba(100, 90, 300, 0.3); */
   color: rgb(255, 238, 0);
 }
 
@@ -343,7 +342,6 @@ footer {
 
 .card-item img {
   background-repeat: no-repeat;
-  /* background-size: cover; */
   width: 100%;
   border: 1px solid #ccc;
   box-shadow: 10px -15px 10px 5px rgba(0, 0, 0, .2);
@@ -361,6 +359,12 @@ footer {
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
+}
+
+.parallax_container {
+  background-color: rgba(100, 200, 190, 0.8);
+    overflow:hidden;
+    padding: -1%;
 }
 
 .scene {

@@ -120,10 +120,10 @@ $('.scene').mousemove(function(e){
 });
 
 function callParallax(e){
-  parallaxIt(e, '.layer.layer_1', -100);
-  parallaxIt(e, '.layer.layer_2', -70);
-  parallaxIt(e, '.layer.layer_3', -50);
-  parallaxIt(e, '.scene', -30);
+  parallaxIt(e, '.layer.layer_1', 100);
+  parallaxIt(e, '.layer.layer_2', 70);
+  parallaxIt(e, '.layer.layer_3', 50);
+  parallaxIt(e, '.scene', 30);
 }
 
 function parallaxIt(e, target, movement){
