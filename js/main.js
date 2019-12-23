@@ -152,7 +152,6 @@ function parallaxIt(e, start_point, target, movement){
 
   var relX = e.pageX - $this.offset().left;
   var relY = e.pageY - $this.offset().top;
-  console.log(relY);
 
   TweenMax.to(target, 1, {
     x: (relX - $this.width()/2) / $this.width() * movement,
@@ -207,4 +206,29 @@ var bottom = elementBoundary.bottom;
 var height = elementBoundary.height;
 
 return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
+
+
+
+
+
+
+
+
+
+var sub_text = document.getElementsByClassName('text_pulse');
+var forEach = Array.prototype.forEach;
+forEach.call(sub_text, function(b){
+  b.addEventListener('click', addElement);
+})
+
+function addElement(e){
+  var addDiv = document.createElement('div'),
+  mValue = Math.max(this.clientWidth, this.clientHeight);
+  addDiv.style.width = addDiv.style.height = mValue + 'px';
+  addDiv.style.left = e.pageX - (mValue / 2) + 'px';
+  addDiv.style.top = e.pageY - (mValue / 2) + 'px';
+  addDiv.style.overflow = 'hidden';
+  addDiv.classList.add('pulse');
+  this.appendChild(addDiv);
 }
