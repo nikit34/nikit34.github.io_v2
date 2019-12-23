@@ -4,6 +4,7 @@ body {
     "Segoe UI Symbol", "Noto Color Emoji";
   padding-top: 54px;
   color: #868e96;
+  overflow-x:  hidden;
 }
 
 @media (min-width: 992px) {
@@ -138,6 +139,31 @@ p.lead {
   border:1px solid #00aaff;
 }
 
+.dev-icons .list-inline-item.my-lower-icons img {
+  height: 80px;
+  width: 80px;
+  background: radial-gradient(rgba(150,150,150,0.5),rgba(255,255,255,0));
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border:0px solid #555;
+  border-radius:50%;
+  -moz-transition: width 1s, height 1s, border-radius 1s;
+  -webkit-transition: width 1s, height 1s, border-radius 1s;
+  -o-transition: width 1s, height 1s, border-radius 1s;
+  transition: width 1s, height 1s, border-radius 1s;
+}
+
+
+.dev-icons .list-inline-item.my-lower-icons img:hover{
+  background: radial-gradient(rgba(80, 50, 200, 0.8),rgba(80, 50, 200, 0.6),rgba(80, 50, 200, 0.4),rgba(255, 255, 255, 0)) !important;
+  box-shadow:0 0 15px #ffbb00;
+  border: 1px solid #ff00dd;
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
@@ -250,6 +276,16 @@ a {
   color: rgba(80, 50, 200, 0.9);
 }
 
+.progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 0.7%;
+  background-color: tomato;
+  z-index: 99999999999999;
+}
+
 .social-icons a.button_download {
   background-color:rgba(80, 50, 200, 0.9);
   border-radius: 20px;
@@ -288,18 +324,39 @@ p b:hover {
 p {
   text-indent: 5%;
 }
+#text_move {
+  transition: all 0.6s ease-in-out;
+  transform: translate3d(0px, 30px, 10px);
+}
+
+#text_move.active {
+  transform: translate3d(0px, 0px, 0px);
+}
 
 #interests {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#fon_main_block {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  margin-top: -1%;
+  overflow:  hidden;
   background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.6),
-      rgba(255, 255, 255, 1)
-    ),
-    url("../img/backcover_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    180deg,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6),
+    rgba(255, 255, 255, 1)
+  ),
+  url("../img/backcover_1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .backlight_black_text {
@@ -341,14 +398,22 @@ footer {
   width: 250px;
   height: 250px;
   transition: transform 0.8s;
+  border: 1px solid #ccc;
+  box-shadow: 10px -15px 10px 5px rgba(0, 0, 0, .2);
 }
 
 .card-item img {
   background-repeat: no-repeat;
-  width: 100%;
-  border: 1px solid #ccc;
-  box-shadow: 10px -15px 10px 5px rgba(0, 0, 0, .2);
-  height: 100%;
+  padding-top:10%;
+  padding-left: 35%;
+  padding-right: 20%;
+  height: 40%;
+}
+
+.card-item em {
+  margin: 10%;
+  text-align: justify;
+  font-weight: 600;
 }
 
 #fixed{
