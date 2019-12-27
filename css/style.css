@@ -7,12 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-    padding-left: 17rem;
-  }
-}
 
 h1,
 h2,
@@ -187,6 +181,10 @@ p.lead {
 }
 
 @media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
   #sideNav {
     text-align: center;
     position: fixed;
@@ -240,6 +238,19 @@ p.lead {
     background-size: 0% 5%;
     transition: background-size 0.5s;
   }
+  section.resume-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+  section.resume-section .resume-item .resume-date {
+    min-width: 18rem;
+  }
 }
 
 #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
@@ -256,24 +267,8 @@ section.resume-section .resume-item .resume-date {
   min-width: none;
 }
 
-@media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
-  }
-  section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
-  }
-}
-
 .resume-item {
   padding: 2%;
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
 }
 
 .bg-primary {
@@ -658,4 +653,68 @@ svg circle {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.5s;
+}
+
+#blue {
+  color: rgb(0, 0, 255);
+  transition: 0.5s all;
+}
+
+#blue:hover {
+  text-shadow:1px 1px 1px rgba(255, 255, 255, 0.75);
+  margin-top: -2%;
+  color:rgba(0, 0, 255, 0.5);
+  transform: rotate(-15deg);
+}
+
+#red {
+  color: rgb(255, 0, 0);
+  transition: 0.5s all;
+}
+
+#red:hover {
+  color:rgba(255, 0, 0, 0.5);
+  margin-top: -2%;
+  transform: rotate(15deg);
+}
+
+#yellow {
+  color: rgb(220, 255, 0);
+  transition: 0.5s all;
+}
+
+#yellow:hover {
+  color:rgba(220, 255, 0, 0.5);
+  margin-top: -2%;
+  transform: rotate(180deg);
+}
+
+#green {
+  color: rgb(0, 255, 0);
+  transition: 0.1s all;
+}
+
+#green:hover {
+  color:rgba(0, 255, 0, 0.5);
+  margin-top: 1.5%;
+  transform: rotate(10deg);
+}
+
+#blink {
+  -webkit-animation: blink 0.7s 1s ease infinite;
+  animation: blink 0.7s 1s ease infinite;
+}
+@-webkit-keyframes blink {
+  5% { color: rgba(34, 34, 34, 0.1); }
+  25% { color: rgba(34, 34, 34, 0.4); }
+  50% { color: rgba(34, 34, 34, 0.2); }
+  75% { color: rgba(34, 34, 34, 1); }
+  100% { color: rgba(34, 34, 34, 0); }
+}
+@keyframes blink {
+  5% { color: rgba(34, 34, 34, 0.1); }
+  25% { color: rgba(34, 34, 34, 0.4); }
+  50% { color: rgba(34, 34, 34, 0.2); }
+  75% { color: rgba(34, 34, 34, 1); }
+  100% { color: rgba(34, 34, 34, 0); }
 }
