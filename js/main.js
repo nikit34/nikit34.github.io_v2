@@ -57,30 +57,35 @@ function progressBar(e) {
 
 function backlight_over(n) {
   var text_block = document.getElementsByClassName("backlight_black_text");
-  var subhead_block = document.getElementsByClassName("backlight_orange_text");
+  var subhead_block = document.getElementsByClassName("backlight_blue_text");
+  var subhead_block_data = document.getElementsByClassName("text_primary");
   var block_shadow = document.getElementsByClassName("resume-item");
   for (let i = 2 * n - 2; i <= 2 * n - 1; i++) {
     text_block[i].style.color = "black";
     text_block[i].style.transition = "all 1s";
   }
   subhead_block[n - 1].style.color = "rgba(80, 50, 200, 0.9)";
+  subhead_block_data[n].style.color = "rgba(255, 150, 0, 0.9)";
+  block_shadow[n - 1].style.boxShadow = "0px 0px 20px 20px rgba(100,100,100,0.5)";
   subhead_block[n - 1].style.transition = "all 1s";
-  block_shadow[n - 1].style.boxShadow =
-    "0px 0px 20px 20px rgba(100,100,100,0.5)";
+  subhead_block_data[n].style.transition = "all 1s";
   block_shadow[n - 1].style.transition = "all 1s";
 }
 
 function backlight_out(n) {
   var text_block = document.getElementsByClassName("backlight_black_text");
-  var subhead_block = document.getElementsByClassName("backlight_orange_text");
+  var subhead_block = document.getElementsByClassName("backlight_blue_text");
+  var subhead_block_data = document.getElementsByClassName("text_primary");
   var block_shadow = document.getElementsByClassName("resume-item");
   for (let i = 2 * n - 2; i <= 2 * n - 1; i++) {
     text_block[i].style.color = "#868e96";
     text_block[i].style.transition = "all 1s";
   }
   subhead_block[n - 1].style.color = "#868e96";
-  subhead_block[n - 1].style.transition = "all 1s";
+  subhead_block_data[n].style.color = "rgba(80, 50, 200, 0.9)";
   block_shadow[n - 1].style.boxShadow = "none";
+  subhead_block[n - 1].style.transition = "all 1s";
+  subhead_block_data[n].style.transition = "all 1s";
   block_shadow[n - 1].style.transition = "all 1s";
 }
 
@@ -97,7 +102,7 @@ function startRotate(event) {
   const halfHeight = cardItem.offsetHeight / 2;
   cardItem.style.transform =
     "rotateX(" +
-    -(event.offsetY - halfHeight) / 5 +
+    -(event.offsetY - halfHeight + 40) / 5 +
     "deg) rotateY(" +
     (event.offsetX - halfHeight) / 5 +
     "deg)";

@@ -51,6 +51,25 @@ h4 {
   background-color: rgba(150, 10, 250, 0.7);
 }
 
+#main_subhead_filling {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    rgba(250, 250, 50, 0.6),
+    rgba(250, 250, 50, 1)
+  );
+  background-size: 100% 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  transition: 1s all;
+}
+
+#main_subhead_filling:hover {
+  background-size: 0% 100%;
+  background-color: rgba(255, 150, 0, 0.9);
+}
+
 h2 {
   font-size: 3.5rem;
 }
@@ -73,6 +92,11 @@ p.lead {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
   color: rgba(80, 50, 200, 0.8);
+  transition: color 1s;
+}
+
+.subheading:hover {
+  color: rgba(250, 50, 50, 0.9);
 }
 
 .social-icons a {
@@ -105,41 +129,38 @@ p.lead {
 .dev-icons {
   font-size: 3rem;
 }
-
 .dev-icons .list-inline-item i:hover {
-  background: radial-gradient(
-    rgba(100, 100, 100, 0.5),
-    rgba(255, 255, 255, 0.5)
-  );
+  animation: change_color_icon 10s ease infinite;
 }
 
+@keyframes change_color_icon {
+      0%   {color: whitesmoke;}
+      25%  {color: yellow;}
+      50%  {color: blue;}
+      75%  {color: green;}
+      90% {color: red;}
+      100% {color: rgba(255,0,0,0.1)}
+    }
+
 .dev-icons .list-inline-item.my-icons img {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: gray;
   margin-top: -20%;
-  height: 1em;
-  background: radial-gradient(rgba(150, 150, 150, 0.5), rgba(255, 255, 255, 0));
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 1px solid #555;
-  border-radius: 5px;
+  height: 1.1em;
+  padding: 5px;
 }
 
 .dev-icons .list-inline-item.my-icons img:hover {
-  background: radial-gradient(
-    rgba(80, 50, 200, 0.8),
-    rgba(80, 50, 200, 0.6),
-    rgba(80, 50, 200, 0.4),
-    rgba(255, 255, 255, 0)
-  ) !important;
-  box-shadow: 0 0 15px #00aaff;
-  border: 1px solid #00aaff;
+  animation: change_filter_icon 10s ease infinite;
+  border-radius: 10px;
 }
+
+@keyframes change_filter_icon {
+      0%   {background: whitesmoke;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      90% {background: red;}
+      100% {background: rgba(255,0,0,0.1);}
+    }
 
 .dev-icons .list-inline-item.my-lower-icons img {
   height: 80px;
@@ -275,8 +296,8 @@ section.resume-section .resume-item .resume-date {
   background-color: rgba(80, 50, 200, 1) !important;
 }
 
-.text-primary {
-  color: rgba(80, 50, 200, 0.9) !important;
+.text_primary {
+  color: rgba(80, 50, 200, 0.9);
 }
 
 a {
@@ -322,11 +343,11 @@ b {
 }
 b:hover {
   font-size: 105%;
-  color: rgba(0, 255, 190, 0.8);
+  color: rgba(250, 50, 50, 0.9);
 }
 p b:hover {
   font-size: 110%;
-  color: rgba(250, 250, 50, 0.9);
+  color: rgba(255, 150, 0, 0.9);
 }
 p {
   text-indent: 5%;
@@ -338,6 +359,30 @@ p {
 
 #text_move.active {
   transform: translate3d(0px, 0px, 0px);
+}
+
+ul li#text_move span.one {
+  transition: color 1s;
+}
+
+ul:hover li#text_move span.one {
+  color: rgba(255, 50, 0, 0.9);
+}
+
+ul li#text_move span.two {
+  transition: color 2s;
+}
+
+ul:hover li#text_move span.two {
+  color: rgba(255, 100, 0, 0.9);
+}
+
+ul li#text_move span.three {
+  transition: color 3s;
+}
+
+ul:hover li#text_move span.three {
+  color: rgba(250, 150, 50, 0.9);
 }
 
 #interests {
@@ -410,10 +455,10 @@ footer {
 .card-item {
   background-color: #fff !important;
   width: 250px;
-  height: 250px;
-  transition: transform 0.8s;
+  height: 270px;
+  transition: transform 0.2s;
   border: 1px solid #ccc;
-  box-shadow: 10px -15px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px -15px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 .card-item img {
@@ -700,21 +745,53 @@ svg circle {
   transform: rotate(10deg);
 }
 
-#blink {
-  -webkit-animation: blink 0.7s 1s ease infinite;
-  animation: blink 0.7s 1s ease infinite;
+#blink:hover {
+  -webkit-animation: blink 0.5s 0.7s ease infinite;
+  -moz-animation: blink 0.5s 0.7s ease infinite;
+  -o-animation: blink 0.5s 0.7s ease infinite;
+  animation: blink 0.5s 0.7s ease infinite;
 }
 @-webkit-keyframes blink {
-  5% { color: rgba(34, 34, 34, 0.1); }
-  25% { color: rgba(34, 34, 34, 0.4); }
-  50% { color: rgba(34, 34, 34, 0.2); }
-  75% { color: rgba(34, 34, 34, 1); }
-  100% { color: rgba(34, 34, 34, 0); }
+  0% { color: rgba(0, 0, 0, 0); }
+  25% { color: rgba(50, 50, 50, 0.3); }
+  50% { color: rgba(50, 50, 50, 0.6); padding:0;margin:0;}
+  75% { color: rgba(50, 50, 50, 0.9); margin-top:-10px;}
+  80% {color: rgba(90, 40, 40, 1); margin-top:10px;}
+  85% {color: rgba(130, 30, 30, 1); margin-left:20px;}
+  90% {color: rgba(170, 20, 20, 1); margin-left:-40px;}
+  95% {color: rgba(210, 10, 10, 1); padding: 0; margin:0;}
+  100% { color: rgba(255, 0, 0, 0.8);}
+}
+@-moz-keyframes blink {
+  0% { color: rgba(0, 0, 0, 0); }
+  25% { color: rgba(50, 50, 50, 0.3); }
+  50% { color: rgba(50, 50, 50, 0.6); padding:0;margin:0;}
+  75% { color: rgba(50, 50, 50, 0.9); margin-top:-10px;}
+  80% {color: rgba(90, 40, 40, 1); margin-top:10px;}
+  85% {color: rgba(130, 30, 30, 1); margin-left:20px;}
+  90% {color: rgba(170, 20, 20, 1); margin-left:-40px;}
+  95% {color: rgba(210, 10, 10, 1); padding: 0; margin:0;}
+  100% { color: rgba(255, 0, 0, 0.8);}
+}
+@-o-keyframes blink {
+  0% { color: rgba(0, 0, 0, 0); }
+  25% { color: rgba(50, 50, 50, 0.3); }
+  50% { color: rgba(50, 50, 50, 0.6); padding:0;margin:0;}
+  75% { color: rgba(50, 50, 50, 0.9); margin-top:-10px;}
+  80% {color: rgba(90, 40, 40, 1); margin-top:10px;}
+  85% {color: rgba(130, 30, 30, 1); margin-left:20px;}
+  90% {color: rgba(170, 20, 20, 1); margin-left:-40px;}
+  95% {color: rgba(210, 10, 10, 1); padding: 0; margin:0;}
+  100% { color: rgba(255, 0, 0, 0.8);}
 }
 @keyframes blink {
-  5% { color: rgba(34, 34, 34, 0.1); }
-  25% { color: rgba(34, 34, 34, 0.4); }
-  50% { color: rgba(34, 34, 34, 0.2); }
-  75% { color: rgba(34, 34, 34, 1); }
-  100% { color: rgba(34, 34, 34, 0); }
+  0% { color: rgba(0, 0, 0, 0); }
+  25% { color: rgba(50, 50, 50, 0.3); }
+  50% { color: rgba(50, 50, 50, 0.6); padding:0;margin:0;}
+  75% { color: rgba(50, 50, 50, 0.9); margin-top:-10px;}
+  80% {color: rgba(90, 40, 40, 1); margin-top:10px;}
+  85% {color: rgba(130, 30, 30, 1); margin-left:20px;}
+  90% {color: rgba(170, 20, 20, 1); margin-left:-40px;}
+  95% {color: rgba(210, 10, 10, 1); padding: 0; margin:0;}
+  100% { color: rgba(255, 0, 0, 0.8);}
 }
