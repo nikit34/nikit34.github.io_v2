@@ -352,6 +352,11 @@ p b:hover {
 p {
   text-indent: 5%;
 }
+
+p#text_move {
+ line-height: 1;
+}
+
 #text_move {
   transition: all 0.6s ease-in-out;
   transform: translate3d(0px, 30px, 10px);
@@ -419,14 +424,49 @@ ul:hover li#text_move span.three {
   color: #868e96;
 }
 
+#about {
+  margin-bottom: -7%;
+  margin-top: -7%;
+}
+
+#about p span{
+  transition: color 0.7s;
+}
+
+#about:hover p span{
+  color:black;
+}
+
+#awards {
+  margin-bottom: -3%;
+  margin-top: -3%;
+}
+
+#awards ul li span {
+  transition: color 0.7s;
+}
+
+#awards:hover ul li span {
+  color:black;
+}
+
 footer {
   overflow-x: hidden;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   position: sticky;
-  bottom: 0;
+  bottom: 0%;
+}
+
+footer em{
+  color:rgba(0,0,0,0);
+  transition: color 2s;
+}
+
+footer:hover em{
+  color:white;
 }
 
 .my_container {
@@ -473,7 +513,14 @@ footer {
   margin: 10%;
   text-align: justify;
   font-weight: 600;
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0);
+  transition: border-bottom .3s;
 }
+
+.card-item:hover em {
+  border-bottom-color: rgb(80, 80, 80);
+}
+
 
 #fixed {
   height: 300px;
@@ -550,23 +597,30 @@ footer {
   color: rgba(250, 250, 50, 0.9);
 }
 
-.pulse {
-  background-color: aqua;
-  border-radius: 50%;
-  animation: pulse 1.2s ease-out;
-  transform: scale(0);
-  position: absolute;
-}
-@keyframes pulse {
-  to {
-    transform: scale(2);
-    background-color: #ffffff;
-    opacity: 0;
-  }
+.text_line {
+  display: inline-block;
+  text-decoration:none;
+  cursor: pointer;
 }
 
-.text_pulse .pulse {
-  overflow: hidden;
+.text_line:after {
+  display: block;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.2),
+    rgba(70, 40, 180, 1)
+  );
+  height: 2px;
+  width: 0%;
+     -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+
+.text_line:hover:after,
+.text_line:focus:after {
+    width: 100%;
 }
 
 svg {
@@ -698,6 +752,10 @@ svg circle {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.5s;
+}
+
+.black_content {
+  color: #868e96;
 }
 
 #blue {
