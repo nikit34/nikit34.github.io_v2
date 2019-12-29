@@ -424,6 +424,10 @@ ul:hover li#text_move span.three {
   color: #868e96;
 }
 
+#portfolio {
+  margin-top: -10%;
+}
+
 #about {
   margin-bottom: -7%;
   margin-top: -7%;
@@ -467,6 +471,10 @@ footer em{
 
 footer:hover em{
   color:white;
+}
+
+#skills {
+  margin-top: -5%;
 }
 
 .my_container {
