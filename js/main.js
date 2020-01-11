@@ -318,25 +318,25 @@ function createCloud() {
   world.appendChild(div);
 
   var list_img_skills = {
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Python.png": 1,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Cpp.png": 1,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/JavaScript.png": 1,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/C.png": 0.8,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/scss.png": 0.8,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/SQL.png": 0.8,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Django.png": 0.9,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Flask.png": 0.9,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/React.png": 0.6,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Windows.png": 0.5,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Linux.png": 0.5,
-    "file:///C:/Users/permi/source/repos/draft/2/img/icon/bug.png": 0.5,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/QA.png": 0.2,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Automation.png": 0.2,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/SkLearn.png": 0.7,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/TensorFlow.png": 0.7,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/Keras.png": 0.7,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/OpenCV.png": 0.8,
-    "file:///C:/Users/permi/source/repos/draft/2/img/word/ScikitImage.png": 0.7
+    "../img/word/Python.png": 1,
+    "../img/word/Cpp.png": 1,
+    "../img/word/JavaScript.png": 1,
+    "../img/word/C.png": 0.8,
+    "../img/word/scss.png": 0.8,
+    "../img/word/SQL.png": 0.8,
+    "../img/word/Django.png": 0.9,
+    "../img/word/Flask.png": 0.9,
+    "../img/word/React.png": 0.6,
+    "../img/word/Windows.png": 0.5,
+    "../img/word/Linux.png": 0.5,
+    "../img/icon/bug.png": 0.5,
+    "../img/word/QA.png": 0.2,
+    "../img/word/Automation.png": 0.2,
+    "../img/word/SkLearn.png": 0.7,
+    "../img/word/TensorFlow.png": 0.7,
+    "../img/word/Keras.png": 0.7,
+    "../img/word/OpenCV.png": 0.8,
+    "../img/word/ScikitImage.png": 0.7
   };
 
   for (var j = 0; j < 50 + Math.round(Math.random() * 10); j++) {
