@@ -318,25 +318,29 @@ function createCloud() {
   world.appendChild(div);
 
   var list_img_skills = {
-    "../img/word/Python.png": 1,
-    "../img/word/Cpp.png": 1,
-    "../img/word/JavaScript.png": 1,
-    "../img/word/C.png": 0.8,
-    "../img/word/scss.png": 0.8,
-    "../img/word/SQL.png": 0.8,
-    "../img/word/Django.png": 0.9,
-    "../img/word/Flask.png": 0.9,
-    "../img/word/React.png": 0.6,
-    "../img/word/Windows.png": 0.5,
-    "../img/word/Linux.png": 0.5,
-    "../img/icon/bug.png": 0.5,
-    "../img/word/QA.png": 0.2,
-    "../img/word/Automation.png": 0.2,
-    "../img/word/SkLearn.png": 0.7,
-    "../img/word/TensorFlow.png": 0.7,
-    "../img/word/Keras.png": 0.7,
-    "../img/word/OpenCV.png": 0.8,
-    "../img/word/ScikitImage.png": 0.7
+    "img/word/Python.png": 1,
+    "img/word/Cpp.png": 1,
+    "img/word/JavaScript.png": 1,
+    "img/word/C.png": 1,
+    "img/word/scss.png": 0.8,
+    "img/word/SQL.png": 1,
+    "img/word/Django.png": 0.9,
+    "img/word/Flask.png": 0.9,
+    "img/word/React.png": 0.6,
+    "img/word/Windows.png": 0.5,
+    "img/word/Linux.png": 0.5,
+    "img/icon/bug.png": 0.5,
+    "img/word/QA.png": 0.2,
+    "img/word/Automation.png": 0.2,
+    "img/word/SkLearn.png": 0.6,
+    "img/word/TensorFlow.png": 0.7,
+    "img/word/Keras.png": 0.6,
+    "img/word/OpenCV.png": 0.8,
+    "img/word/ScikitImage.png": 0.7,
+    "img/word/kali.png": 0.5,
+    "img/word/PostgreSQL.png": 0.7,
+    "img/word/MySQL.png": 0.7,
+    "img/word/threeJS.png": 0.5,
   };
 
   for (var j = 0; j < 50 + Math.round(Math.random() * 10); j++) {
@@ -382,7 +386,7 @@ function createCloud() {
     var a = Math.random() * 360;
     var s = 0.25 + Math.random();
     x *= 0.9;
-    y *= 0.6;
+    y *= 0.8;
     cloud.data = {
       x: x,
       y: y,
