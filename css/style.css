@@ -504,8 +504,8 @@ footer:hover em {
 .my_container {
   display: flex;
   height: 60vh;
-  border-top: 4px solid #f0f0f0;
-  border-bottom: 4px solid #f0f0f0;
+  /* border-top: 4px solid #f0f0f0; */
+  /* border-bottom: 4px solid #f0f0f0; */
   background: url("../img/backcover_4.jpeg") no-repeat center center fixed;
   background-blend-mode: multiply;
   background-color: lightblue;
@@ -515,6 +515,10 @@ footer:hover em {
   -webkit-background-size: cover;
   justify-content: space-around;
   align-items: center;
+}
+
+.my_container.shad {
+  box-shadow: 0 0 40px rgba(0,0,0,1);
 }
 
 .card {
